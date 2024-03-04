@@ -63,7 +63,7 @@ main {
 .btn.add {
   width: 100px;
   background-color: var(--header-bcolor);
-  transition: opacity 0.55s;
+  transition: opacity 0.5s;
   transition: background-color 0.5s;
 }
 
@@ -80,13 +80,60 @@ main {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
   grid-auto-rows: 300px;
-  gap: 10px;
+  gap: 20px;
   margin-top: 15px;
 }
 
 .card {
   background-color: white;
   border-radius: 9px;
+  box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.15);
+  padding: 15px 0;
+}
+.card > p {
+  text-align: center;
+  margin: 15px;
+}
+.title {
+  font-size: 1.4rem;
+}
+.btn-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 10px;
+}
+
+.btn.delete,
+.btn.read {
+  width: 45%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-align: center;
+}
+.btn.delete {
+  vertical-align: top;
+  padding: 20px;
+  background-color: var(--login-bcolor);
+  color: white;
+  transition: opacity 0.15s;
+}
+
+.btn.delete:hover,
+.btn.read:hover {
+  opacity: 0.7;
+}
+
+.btn.delete:active,
+.btn.read:active {
+  opacity: 0.4;
+}
+
+.btn.read {
+  background-color: rgb(62, 173, 62);
+  padding: 20px;
+}
+.btn.read.not {
+  background-color: rgb(245, 102, 102);
 }
 
 /* FOOTER */
